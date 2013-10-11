@@ -1,0 +1,78 @@
+es:
+  refinery:
+    plugins:
+      grant_applications:
+        title: Grant Applications
+    grant_applications:
+      grant_applications:
+        new:
+          header_message: "Mil disculpas hay un pequeño problema."
+          message: "Los siguientes problemas necesitan ser corregidos:"
+          send: Enviar mensaje
+          privacy_policy: "Nosotros valoramos tu privacidad"
+      admin:
+        grant_applications:
+          grant_application:
+            move_grant_application_to_closed: Cambiar esta consulta a cerrada
+            move_grant_application_to_open: Cambiar esta consulta a abierta
+            read_grant_application: Leer esta consulta
+            remove_grant_application: "Estas seguro que quieres borrar esta consulta de '%{name}'?"
+            title: Grant Applications
+          toggle_status:
+            closed: "La consulta '%{grant_application}' esta cerrada"
+            reopened: "La consulta '%{grant_application}' esta abierta"
+          index:
+            no_grant_applications: No has recibido ninguna consulta aun.
+          show:
+            details: Detalles
+            click_to_email: Click al email
+            status: Estatus
+            open: Abierto
+            closed: Cerrado
+            age: Edad
+            actions: Acciones
+            back_to_all_grant_applications: Regresar a todas las consultas
+            grant_application: Grant Application
+          submenu:
+            update_notified: "Actualizar a quien será notificado"
+            edit_confirmation_email: "Editar email de confirmación"
+        settings:
+          update:
+            updated: "'%{setting}' fue actualizado exitosamente."
+          notification_recipients_form:
+            settings_value_name: Mandar notificaciones a
+            explanation: "Cada vez que alguien se comunique con usted en su sitio web, Refinery enviara un correo electrónico respecto a esta nueva consulta."
+            hint: "Ingrese una dirección de correo. Ingrese la dirección de correo de las persona que vaya a ser notificada, si quiere que varias personas sean notificadas ingrese las direcciones de correo separadas por comas."
+            example: "Ejemplo: me@domain.com, friend@msn.com, workmate@work.com"
+          confirmation_email_form:
+            to: Para
+            from: De
+            subject: Asunto
+            click_to_edit_subject: Click aqui para modificar el asunto
+            explanation: "Cada vez que alguien se comunique con usted en su sitio web, Refinery enviara un correo electrónico respecto a esta nueva consulta."
+            below_edit_email_sent: "Abajo usted puede editar el email a donde la consulta será enviado."
+            the_customer_making_grant_application: El cliente haciendo la consulta
+            message: Mensaje
+            note: "Nota: ingrese el texto %name% donde quiera que el nombre del cliente aparezca en el email"
+          subject_form:
+            subject_value_name: Asunto
+  activerecord:
+    models:
+      grant_application: Grant Application
+    attributes:
+      grant_application:
+        applicant: Applicant
+        email: Email
+        address: Address
+        supporter: Supporter
+        supporter_contact: Supporter contact
+        application_details: Application details
+        relevant_information: Relevant information
+        cost_details: Cost details
+        other_contributions: Other contributions
+        amount_requested: Amount requested
+        registered_care_allowance: Registered care allowance
+        supported_living_allowance: Supported living allowance
+        domiciliary_allowance: Domiciliary allowance
+        none: None
+        accept_terms: Accept terms

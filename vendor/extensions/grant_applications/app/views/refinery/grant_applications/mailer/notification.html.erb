@@ -1,0 +1,33 @@
+<%= t('.greeting') %>,<br/>
+<br/>
+<%= t('.you_recieved_new_grant_application') %><br/>
+<br/>
+<%= t('.grant_application_starts') %><br/>
+<br/>
+<%= t('.applicant', :default => t('activerecord.attributes.grant_application.applicant')) %>: <%= @grant_application.applicant %><br/>
+<%= t('.email', :default => t('activerecord.attributes.grant_application.email')) %>: <%= @grant_application.email %><br/>
+<%= t('.address', :default => t('activerecord.attributes.grant_application.address')) %>: 
+<%= @grant_application.address %>
+<%= t('.supporter', :default => t('activerecord.attributes.grant_application.supporter')) %>: <%= @grant_application.supporter %><br/>
+<%= t('.supporter_contact', :default => t('activerecord.attributes.grant_application.supporter_contact')) %>: 
+<%= @grant_application.supporter_contact %>
+<%= t('.application_details', :default => t('activerecord.attributes.grant_application.application_details')) %>: 
+<%= @grant_application.application_details %>
+<%= t('.relevant_information', :default => t('activerecord.attributes.grant_application.relevant_information')) %>: 
+<%= @grant_application.relevant_information %>
+<%= t('.cost_details', :default => t('activerecord.attributes.grant_application.cost_details')) %>: 
+<%= @grant_application.cost_details %>
+<%= t('.other_contributions', :default => t('activerecord.attributes.grant_application.other_contributions')) %>: <%= @grant_application.other_contributions %><br/>
+<%= t('.amount_requested', :default => t('activerecord.attributes.grant_application.amount_requested')) %>: <%= @grant_application.amount_requested %><br/>
+<%= t('.registered_care_allowance', :default => t('activerecord.attributes.grant_application.registered_care_allowance')) %>: <%= @grant_application.registered_care_allowance %><br/>
+<%= t('.supported_living_allowance', :default => t('activerecord.attributes.grant_application.supported_living_allowance')) %>: <%= @grant_application.supported_living_allowance %><br/>
+<%= t('.domiciliary_allowance', :default => t('activerecord.attributes.grant_application.domiciliary_allowance')) %>: <%= @grant_application.domiciliary_allowance %><br/>
+<%= t('.none', :default => t('activerecord.attributes.grant_application.none')) %>: <%= @grant_application.none %><br/>
+<%= t('.accept_terms', :default => t('activerecord.attributes.grant_application.accept_terms')) %>: <%= @grant_application.accept_terms %><br/>
+<br/>
+<%= t('.grant_application_ends') %><br/>
+<br/>
+<%= t('.closing_line') %>,<br/>
+<%= Refinery::Core.site_name %><br/>
+<br/>
+<%= t('.ps_html') %>

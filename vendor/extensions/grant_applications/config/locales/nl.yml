@@ -1,0 +1,90 @@
+nl:
+  refinery:
+    plugins:
+      grant_applications:
+        title: Grant Applications
+        description: Contactformulier en beheer van grant applications
+    grant_applications:
+      grant_applications:
+        new:
+          send: Bericht verzenden
+          privacy_policy: Wij respecteren uw privacy
+      admin:
+        grant_applications:
+          delete: Deze grant application definitief verwijderen
+          grant_application:
+            read_grant_application: Lees de grant application
+            said: zei
+            mark_as_spam: Als spam markeren
+            mark_as_ham: Naar de inbox verplaatsen
+          submenu:
+            inbox: Inbox
+            spam: Spam
+            update_notified: Wijzigen wie op de hoogte wordt gesteld
+            edit_confirmation_email: Bevestigings-e-mail bewerken
+          index:
+            no_grant_applications: U heeft nog geen grant applications ontvangen.
+          spam:
+            no_spam: Hoera! U heeft geen spam.
+          show:
+            details: Details
+            age: Leeftijd
+            actions: Acties
+            back_to_all_grant_applications: Terug naar alle grant applications
+            spam: Spam
+            spam_yes: 'ja'
+            grant_application: Grant Application
+            to: Aan
+            from: Van
+            click_to_email: Klik hier om een e-mail te sturen naar dit adres
+            phone: Telefoonnummer
+            date: Datum
+            message: Bericht
+        settings:
+          notification_recipients_form:
+            settings_value_name: Stuur notificaties naar
+            explanation: "Telkens wanneer iemand het contactformulier invult op uw website, stuurt Refinery een bevestiging naar de verzender."
+            hint: "Wilt u naar meerdere adressen notificaties sturen? Vul dan meerdere e-mailadressen in gescheiden door komma's"
+            example: "Bijvoorbeeld: jan@werk.nl, els@kantoor.nl"
+          confirmation_email_form:
+            to: Aan
+            from: Van
+            subject: Onderwerp
+            click_to_edit_subject: Klik hier om het onderwerp bewerken
+            explanation: "Telkens wanneer iemand het contactformulier invult op uw website, stuurt Refinery een bevestiging naar de verzender."
+            below_edit_email_sent: Hieronder kunt u de email die verzonden wordt bewerken.
+            the_customer_making_grant_application: De persoon die de grant application heeft ingezonden
+            message: Bericht
+            note: "N.B.: plaats de tekst %name% overal in de email waar u de naam van de klant persoon wilt invoegen"
+      mailer:
+        notification:
+          greeting: Hallo
+          you_recieved_new_grant_application: U hebt een nieuwe grant application ontvangen via de website.
+          grant_application_starts: --- begin van de grant application ---
+          grant_application_ends: --- einde van de grant application ---
+          from: Van
+          email: E-mail
+          phone: Telefoon
+          message: Bericht
+          closing_line: Met vriendelijke groet,
+          ps_html: P.S. Alle grant applications worden opgeslagen in de sectie Grant Applications van Refinery.
+  activerecord:
+    models:
+      grant_application: Grant Application
+    attributes:
+      grant_application:
+        applicant: Applicant
+        email: Email
+        address: Address
+        supporter: Supporter
+        supporter_contact: Supporter contact
+        application_details: Application details
+        relevant_information: Relevant information
+        cost_details: Cost details
+        other_contributions: Other contributions
+        amount_requested: Amount requested
+        registered_care_allowance: Registered care allowance
+        supported_living_allowance: Supported living allowance
+        domiciliary_allowance: Domiciliary allowance
+        none: None
+        accept_terms: Accept terms

@@ -1,0 +1,78 @@
+da:
+  refinery:
+    plugins:
+      grant_applications:
+        title: Grant Applications
+    grant_applications:
+      grant_applications:
+        new:
+          header_message: "Der er et mindre problem"
+          message: "Følgende skal rettes:"
+          send: Send besked
+          privacy_policy: "Vi værner om dine personlige oplysninger"
+      admin:
+        grant_applications:
+          grant_application:
+            move_grant_application_to_closed: Flyt til lukkede henvendelser
+            move_grant_application_to_open: Flyt til åbne henvendelser
+            read_grant_application: Læs henvendelse
+            remove_grant_application: "Er du sikker på du vil slette denne henvendelse fra '%{name}'?"
+            title: Grant Applications
+          toggle_status:
+            closed: "Henvendelsen '%{grant_application}' er lukket"
+            reopened: "Henvendelsen '%{grant_application}' er genåbnet"
+          index:
+            no_grant_applications: Du har endnu ikke modtaget nogen henvendelser.
+          show:
+            details: Detaljer
+            click_to_email: Send en e-mail til adressen
+            status: Status
+            open: "Åben"
+            closed: Lukket
+            age: Tid siden modtagelse
+            actions: Handlinger
+            back_to_all_grant_applications: Tilbage til alle henvendelser
+            grant_application: Grant Application
+          submenu:
+            update_notified: Opdatér, hvem der får besked
+            edit_confirmation_email: Redigér e-mailbekræftelse
+        settings:
+          update:
+            updated: "'%{setting}' er opdateret."
+          notification_recipients_form:
+            settings_value_name: Send besked til
+            explanation: "Hver gang kontaktformularen benyttes, sender Refinery en e-mail med besked om, at der er modtaget en ny henvendelse"
+            hint: "Indtast en e-mail-adresse ovenfor. Skal beskeden sendes til mere end en person, så indtast flere adresser adskilt med kommaer."
+            example: "Fx mig@domæne.dk, ven@hotmail.com, kollega@arbejde.dk"
+          confirmation_email_form:
+            to: Til
+            from: Fra
+            subject: Emne
+            click_to_edit_subject: Klik her for at redigere emnet
+            explanation: "Hver gang kontaktformularen benyttes, sender Refinery en e-mail til den person, der udfyldte formularen, for at bekræfte henvendelsen."
+            below_edit_email_sent: Nedenfor kan du redigere e-mailen, der sendes ud.
+            the_customer_making_grant_application: Kunden, der har henvendt sig
+            message: Besked
+            note: "Bemærk: Anbring teksten %name%, der hvor du vil have kundens navn skal være i e-mailen"
+          subject_form:
+            subject_value_name: Emne
+  activerecord:
+    models:
+      grant_application: Grant Application
+    attributes:
+      grant_application:
+        applicant: Applicant
+        email: Email
+        address: Address
+        supporter: Supporter
+        supporter_contact: Supporter contact
+        application_details: Application details
+        relevant_information: Relevant information
+        cost_details: Cost details
+        other_contributions: Other contributions
+        amount_requested: Amount requested
+        registered_care_allowance: Registered care allowance
+        supported_living_allowance: Supported living allowance
+        domiciliary_allowance: Domiciliary allowance
+        none: None
+        accept_terms: Accept terms

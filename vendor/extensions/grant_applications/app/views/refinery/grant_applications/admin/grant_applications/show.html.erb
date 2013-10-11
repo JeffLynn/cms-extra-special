@@ -1,0 +1,201 @@
+<div id='records'>
+  <h2><%= t('.grant_application') %></h2>
+  <table id='grant_application' class='inquiry'>
+      <tr>
+        <td>
+          <strong>
+            <%= t('.applicant', :default => t('activerecord.attributes.grant_application.applicant')) %>
+          </strong>
+        </td>
+        <td>
+          <%= @grant_application.applicant %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <strong>
+            <%= t('.email', :default => t('activerecord.attributes.grant_application.email')) %>
+          </strong>
+        </td>
+        <td>
+          <%= @grant_application.email %>
+        </td>
+      </tr>
+      <tr>
+        <td valign='top'>
+          <strong>
+            <%= t('.address', :default => t('activerecord.attributes.grant_application.address')) %>
+          </strong>
+        </td>
+        <td>
+          <p style='margin-top: 0px'>
+            <% @grant_application.message.to_s.gsub("\r\n\r\n", "\r\n").split("\r\n").each_with_index do |sentence, index| %>
+              <%=raw "</p><p>" unless index == 0 %>
+              <%= sentence %>
+            <% end %>
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <strong>
+            <%= t('.supporter', :default => t('activerecord.attributes.grant_application.supporter')) %>
+          </strong>
+        </td>
+        <td>
+          <%= @grant_application.supporter %>
+        </td>
+      </tr>
+      <tr>
+        <td valign='top'>
+          <strong>
+            <%= t('.supporter_contact', :default => t('activerecord.attributes.grant_application.supporter_contact')) %>
+          </strong>
+        </td>
+        <td>
+          <p style='margin-top: 0px'>
+            <% @grant_application.message.to_s.gsub("\r\n\r\n", "\r\n").split("\r\n").each_with_index do |sentence, index| %>
+              <%=raw "</p><p>" unless index == 0 %>
+              <%= sentence %>
+            <% end %>
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td valign='top'>
+          <strong>
+            <%= t('.application_details', :default => t('activerecord.attributes.grant_application.application_details')) %>
+          </strong>
+        </td>
+        <td>
+          <p style='margin-top: 0px'>
+            <% @grant_application.message.to_s.gsub("\r\n\r\n", "\r\n").split("\r\n").each_with_index do |sentence, index| %>
+              <%=raw "</p><p>" unless index == 0 %>
+              <%= sentence %>
+            <% end %>
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td valign='top'>
+          <strong>
+            <%= t('.relevant_information', :default => t('activerecord.attributes.grant_application.relevant_information')) %>
+          </strong>
+        </td>
+        <td>
+          <p style='margin-top: 0px'>
+            <% @grant_application.message.to_s.gsub("\r\n\r\n", "\r\n").split("\r\n").each_with_index do |sentence, index| %>
+              <%=raw "</p><p>" unless index == 0 %>
+              <%= sentence %>
+            <% end %>
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td valign='top'>
+          <strong>
+            <%= t('.cost_details', :default => t('activerecord.attributes.grant_application.cost_details')) %>
+          </strong>
+        </td>
+        <td>
+          <p style='margin-top: 0px'>
+            <% @grant_application.message.to_s.gsub("\r\n\r\n", "\r\n").split("\r\n").each_with_index do |sentence, index| %>
+              <%=raw "</p><p>" unless index == 0 %>
+              <%= sentence %>
+            <% end %>
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <strong>
+            <%= t('.other_contributions', :default => t('activerecord.attributes.grant_application.other_contributions')) %>
+          </strong>
+        </td>
+        <td>
+          <%= @grant_application.other_contributions %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <strong>
+            <%= t('.amount_requested', :default => t('activerecord.attributes.grant_application.amount_requested')) %>
+          </strong>
+        </td>
+        <td>
+          <%= @grant_application.amount_requested %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <strong>
+            <%= t('.registered_care_allowance', :default => t('activerecord.attributes.grant_application.registered_care_allowance')) %>
+          </strong>
+        </td>
+        <td>
+          <%= @grant_application.registered_care_allowance %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <strong>
+            <%= t('.supported_living_allowance', :default => t('activerecord.attributes.grant_application.supported_living_allowance')) %>
+          </strong>
+        </td>
+        <td>
+          <%= @grant_application.supported_living_allowance %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <strong>
+            <%= t('.domiciliary_allowance', :default => t('activerecord.attributes.grant_application.domiciliary_allowance')) %>
+          </strong>
+        </td>
+        <td>
+          <%= @grant_application.domiciliary_allowance %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <strong>
+            <%= t('.none', :default => t('activerecord.attributes.grant_application.none')) %>
+          </strong>
+        </td>
+        <td>
+          <%= @grant_application.none %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <strong>
+            <%= t('.accept_terms', :default => t('activerecord.attributes.grant_application.accept_terms')) %>
+          </strong>
+        </td>
+        <td>
+          <%= @grant_application.accept_terms %>
+        </td>
+      </tr>
+  </table>
+</div>
+<div id='actions'>
+  <h2><%= t('.details')%></h2>
+  <p>
+    <strong><%= t('.age') %>:</strong> <%= time_ago_in_words(@grant_application.created_at) %>
+  </p>
+  <h2><%= t('.actions') %></h2>
+  <ul>
+    <li>
+      <%= link_to t('.back_to_all_grant_applications'), refinery.url_for(:action => 'index'),
+                   :class => "back_icon" %>
+    </li>
+    <li>
+      <%= link_to t('delete', :scope => 'refinery.grant_applications.admin.grant_applications'),
+                  refinery.grant_applications_admin_grant_application_path(@grant_application),
+                  :class => 'delete_icon no-tooltip confirm-delete',
+                  :title => t('delete', :scope => 'refinery.grant_applications.admin.grant_applications'),
+                  :'data-confirm' => t('message', :scope => 'refinery.admin.delete', :title => @grant_application.name),
+                  :'data-method' => "delete" %>
+    </li>
+  </ul>
+</div>

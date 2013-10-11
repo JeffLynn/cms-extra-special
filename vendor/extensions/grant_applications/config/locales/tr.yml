@@ -1,0 +1,90 @@
+tr:
+  refinery:
+    plugins:
+      grant_applications:
+        title: Grant Applications
+        description: Iletisim formu ve kayitlarin temini grant applications
+    grant_applications:
+      grant_applications:
+        new:
+          send: Mesaj Gonder
+          privacy_policy: Mahremiyetinize onem veriyoruz.
+      admin:
+        grant_applications:
+          delete: Sonsuza dek grant application sil
+          grant_application:
+            read_grant_application: Read the grant application
+            said: dedi
+            mark_as_spam: Spam olarak isaretle
+            mark_as_ham: Gelen kutusuna tasi
+          submenu:
+            inbox: Gelen Kutusu
+            spam: Istenmeyen E-posta
+            update_notified: Uyari alanlari guncelle
+            edit_confirmation_email: Dogrulama e-posta'sini duzenle
+          index:
+            no_grant_applications: Henuz  Herhangi bir  grant applications almadiniz.
+          spam:
+            no_spam: Oley! Herhangi bir istenmeyen e-posta yok
+          show:
+            details: Detay
+            age: Yas
+            actions: Eylemler
+            back_to_all_grant_applications: Geri don tum grant applications
+            spam: Istenmeyen E-posta
+            spam_yes: 'evet'
+            grant_application: Grant Application
+            to: Kime
+            from: Kimden
+            click_to_email: Bu adrese e-posta'layin
+            phone: Telefon
+            date: Tarih
+            message: Mesaj
+        settings:
+          notification_recipients_form:
+            settings_value_name: Bildirimleri gonderecegin  adres
+            explanation: Her kim olursa seninle web sitesi uzerinden iletisime gecen, Refinery yeni bir grant application  diye e-posta atar.
+            hint: Yeni Bir grant application teslim edildiginde, Refinery bir e-posta bildirisi yollayacak sana.
+            example: "Lutfen e-posta adres(ler)inizi giriniz. Ornek olarak: jack@work.com, jill@office.com gibi"
+          confirmation_email_form:
+            to: Kime
+            from: Kimden
+            subject: Baslik
+            click_to_edit_subject: Basligi degistirmek icin buraya tiklayiniz
+            explanation: Her kim olursa seninle web siten uzerinden iletisime gecen,Refinery yeni bir dogrulama postasi gonderir grant application yapan kisiye
+            below_edit_email_sent: Asagida gonderilen e-postayi duzenleyebilirsin.
+            the_customer_making_grant_application: Musteri grant application yapiyor
+            message: Mesaj
+            note: "Not: metini hizala %name% nerede musterinizin e-posta adresi gibi gozukmesini istiyorsan"
+      mailer:
+        notification:
+          greeting: Selamlar
+          you_recieved_new_grant_application: You just received a new grant application on your website.
+          grant_application_starts: --- grant application starts ---
+          grant_application_ends: --- grant application ends ---
+          from: Kimden
+          email: E-posta
+          phone: Telefon
+          message: Mesaj
+          closing_line: Saygilarimizla
+          ps_html: Senin butun grant applications kayitli oldugu yer "Grant Applications" burasidir eger ileride kullanmak istersen
+  activerecord:
+    models:
+      grant_application: Grant Application
+    attributes:
+      grant_application:
+        applicant: Applicant
+        email: Email
+        address: Address
+        supporter: Supporter
+        supporter_contact: Supporter contact
+        application_details: Application details
+        relevant_information: Relevant information
+        cost_details: Cost details
+        other_contributions: Other contributions
+        amount_requested: Amount requested
+        registered_care_allowance: Registered care allowance
+        supported_living_allowance: Supported living allowance
+        domiciliary_allowance: Domiciliary allowance
+        none: None
+        accept_terms: Accept terms

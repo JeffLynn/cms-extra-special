@@ -1,0 +1,48 @@
+<!-- This Ruby code was automatically generated when the "Stories" engine was generated
+amended by Jeff Lynn -->
+
+
+<!-- This is the menu listing the other stories -->
+<% content_for :side_body do %>
+  <aside>
+    <ul id="stories">
+      <% @stories.each do |story| %>
+	    <!-- Set the colour of the active list item -->
+        <% if story.menu_title == @story.menu_title %>
+		  <li class="selected">
+            <%= link_to story.menu_title, refinery.stories_story_path(story) %>
+          </li>
+		<% else %>
+	      <li>
+            <%= link_to story.menu_title, refinery.stories_story_path(story) %>
+          </li>
+        <% end %>
+      <% end %>
+    </ul>
+  </aside>
+<% end %>
+
+<!-- This is the body containing a photo, a title and the story itself -->
+<% content_for :body do %>
+  <section>
+    <p>
+      <%= image_fu @story.photo, "475x233" %>
+    </p>
+  </section>
+
+  <section>
+    <p class="story_title">
+      <%=raw @story.title %>
+    </p>
+  </section>
+    
+  <section>
+    <p>
+      <%=raw @story.story %>
+    </p>
+  </section>
+<% end %>
+
+
+
+<%= render '/refinery/content_page' %>

@@ -1,0 +1,90 @@
+sk:
+  refinery:
+    plugins:
+      grant_applications:
+        title: Grant Applications
+        description: Poskytuje kontaktný formulár a zaznamenáva grant applications
+    grant_applications:
+      grant_applications:
+        new:
+          send: Odoslať správu
+          privacy_policy: Chránime vaše súkromie
+      admin:
+        grant_applications:
+          delete: Trvalo odstrániť grant application
+          grant_application:
+            read_grant_application: Prečítať grant application
+            said: povedal
+            mark_as_spam: Označiť ako spam
+            mark_as_ham: Označiť ako prečítané
+          submenu:
+            inbox: Inbox
+            spam: Spam
+            update_notified: Upraviť zoznam notifikovaných
+            edit_confirmation_email: Upraviť potvrdzovací e-mail
+          index:
+            no_grant_applications: Zatiaľ ste neobdržali žiadne grant applications.
+          spam:
+            no_spam: Hurá! Nemáte žiaden spam.
+          show:
+            details: Podrobnosti
+            age: Vek
+            actions: Akcie
+            back_to_all_grant_applications: Späť na všetky grant applications
+            spam: Spam
+            spam_yes: 'áno'
+            grant_application: Grant Application
+            to: Komu
+            from: Od
+            click_to_email: Kliknite pre odoslanie tejto adresy e-mailom
+            phone: Telefón
+            date: Dátum
+            message: Správa
+        settings:
+          notification_recipients_form:
+            settings_value_name: Poslať upozornenie pre
+            explanation: Zakaždým, keď Vás niekto kontaktuje cez vaše webové stránky, Refinery odošle e-mail s upozornením na nový grant application.
+            hint: Keď je odoslaný nový grant application, Refinery odošle upozornenie na Váš e-mail.
+            example: "Zadajte e-mailovú adresu(y) ako: jack@work.com, jill@office.com"
+          confirmation_email_form:
+            to: Komu
+            from: Od
+            subject: Predmet
+            click_to_edit_subject: Kliknite tu ak chcete upraviť predmet
+            explanation: Zakaždým, keď Vás niekto kontaktuje cez vaše webové stránky, Refinery odošle e-mail s potvrdením o prijatí odosielateľovi grant application.
+            below_edit_email_sent: Nižšie môžete upraviť e-mail, ktorý je odosielaný.
+            the_customer_making_grant_application: Klient robiť grant application
+            message: Správa
+            note: "Poznámka: umiestniťe text %name%, pre určenie pozície mena klienta v e-maile"
+      mailer:
+        notification:
+          greeting: Ahoj
+          you_recieved_new_grant_application: Práve ste obdržali nový grant application na vašej webové stránke.
+          grant_application_starts: --- grant application začiatok ---
+          grant_application_ends: --- grant application koniec ---
+          from: Od
+          email: E-mail
+          phone: Telefón
+          message: Správa
+          closing_line: S pozdravom
+          ps_html: P.S. Všetky vaše grant applications sú uložené v "Grant Applications" sekcii v Refinery, ak by ste ich chceli zobraziť neskôr.
+  activerecord:
+    models:
+      grant_application: Grant Application
+    attributes:
+      grant_application:
+        applicant: Applicant
+        email: Email
+        address: Address
+        supporter: Supporter
+        supporter_contact: Supporter contact
+        application_details: Application details
+        relevant_information: Relevant information
+        cost_details: Cost details
+        other_contributions: Other contributions
+        amount_requested: Amount requested
+        registered_care_allowance: Registered care allowance
+        supported_living_allowance: Supported living allowance
+        domiciliary_allowance: Domiciliary allowance
+        none: None
+        accept_terms: Accept terms

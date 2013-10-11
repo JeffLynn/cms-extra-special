@@ -1,0 +1,90 @@
+fr:
+  refinery:
+    plugins:
+      grant_applications:
+        title: Grant Applications
+        description: Fournit un formulaire de contact et gère les demandes de contacts.
+    grant_applications:
+      grant_applications:
+        new:
+          send: Envoyer un message
+          privacy_policy: Nous respectons votre vie privée
+      admin:
+        grant_applications:
+          delete: Supprimer définitivement cette requête
+          grant_application:
+            read_grant_application: Lire la requête
+            said: a dit
+            mark_as_spam: Marquer comme spam
+            mark_as_ham: Déplacer dans la boîte de réception
+          submenu:
+            inbox: Boîte de réception
+            spam: Spam
+            update_notified: Choisir qui reçoit les notifications
+            edit_confirmation_email: Modifier l'e-mail de confirmation
+          index:
+            no_grant_applications: Vous n'avez reçu aucune requête.
+          spam:
+            no_spam: Vous n'avez aucun spam.
+          show:
+            details: Détails
+            age: Age
+            actions: Actions
+            back_to_all_grant_applications: Retourner à la liste des requêtes
+            spam: Spam
+            spam_yes: 'oui'
+            grant_application: Grant Application
+            to: À
+            from: De
+            click_to_email: Cliquer ici pour enyoyer un e-mail à cette adresse
+            phone: Téléphone
+            date: Date
+            message: Message
+        settings:
+          notification_recipients_form:
+            settings_value_name: Envoyer une notification à
+            explanation: Chaque fois qu'une demande de contact est rédigée sur votre site, Refinery envoie un e-mail pour le signaler.
+            hint: Quand une nouvelle requête est soumise, Refinery vous envoie un e-mail d'avertissement.
+            example: "Entrez votre/vos addresse(s) e-mail comme il suit: jack@work.com, jill@office.com"
+          confirmation_email_form:
+            to: À
+            from: De
+            subject: Sujet
+            click_to_edit_subject: Cliquez ici pour modifier le sujet
+            explanation: Chaque fois qu'une demande de contact est rédigée sur votre site, Refinery envoie un e-mail pour le signaler.
+            below_edit_email_sent: Ci-dessous vous pouvez modifier l'e-mail qui sera envoyé.
+            the_customer_making_grant_application: Le client à l'origine de la requête
+            message: Message
+            note: "Note: Utilisez %name% à l'endroit où vous souhaitez voir apparaître le nom du client dans l'e-mail"
+      mailer:
+        notification:
+          greeting: Bonjour
+          you_recieved_new_grant_application: Vous avez reçu une nouvelle requête sur votre site.
+          grant_application_starts: --- Début des requêtes ---
+          grant_application_ends: --- Fin des requêtes ---
+          from: De
+          email: E-mail
+          phone: Téléphone
+          message: Message
+          closing_line: Cordialement
+          ps_html: P.S. Toutes les requêtes sont stockées dans la section 'Requêtes' afin que vous puissiez les consulter ultérieurement.
+  activerecord:
+    models:
+      grant_application: Grant Application
+    attributes:
+      grant_application:
+        applicant: Applicant
+        email: Email
+        address: Address
+        supporter: Supporter
+        supporter_contact: Supporter contact
+        application_details: Application details
+        relevant_information: Relevant information
+        cost_details: Cost details
+        other_contributions: Other contributions
+        amount_requested: Amount requested
+        registered_care_allowance: Registered care allowance
+        supported_living_allowance: Supported living allowance
+        domiciliary_allowance: Domiciliary allowance
+        none: None
+        accept_terms: Accept terms

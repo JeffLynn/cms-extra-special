@@ -1,0 +1,16 @@
+<li class='clearfix record <%= cycle("on", "on-hover") %>'>
+  <span class='title'>
+    <%= link_to grant_application.name, refinery.grant_applications_admin_grant_application_path(grant_application) %> <%= t('.said') %>
+    <span class="preview"><%= truncate(strip_tags(sanitize(grant_application.message)), :length => 60) -%></span>
+  </span>
+  <span class='actions'>
+    <%= link_to refinery_icon_tag('delete.png'), refinery.grant_applications_admin_grant_application_path(grant_application),
+                :class => "cancel confirm-delete",
+                :title => t('admin.grant_applications.delete'),
+                :'data-confirm' => t('shared.admin.delete.message', :title => grant_application.name),
+                :'data-method' => "delete" -%>
+
+    <%= link_to refinery_icon_tag('zoom.png'), refinery.grant_applications_admin_grant_application_path(grant_application),
+                :title => t('.read_grant_application') -%>
+  </span>
+</li>

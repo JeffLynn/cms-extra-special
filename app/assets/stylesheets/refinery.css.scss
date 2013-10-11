@@ -1,0 +1,320 @@
+/* 
+Author		: Jeff Lynn
+Created		: 2013.09.26
+Last updated: 2013.10.011
+Purpose		: defines the layout for the elements of the whole website
+*/
+
+/* Define the overall formatting */
+body {
+  font-family: Times, serif;
+  color: #aeafb3;
+  font-size: 100%;
+  width: 950px;
+  margin-left: auto;
+  margin-right: auto;  
+}
+
+
+/* Define the formatting for the standard elements*/
+a {
+  font-size: 0.8em;
+}
+
+a.note {
+  display:none;
+}
+
+a.right_aligned{
+	float:right;
+}
+
+a.contact_email{
+	text-decoration:none;
+	color: #e47f27;
+	font-size: 1em;
+}
+
+a.contact_email:hover{
+	text-decoration:underline;
+}
+
+p { 
+  font-family: times; 
+  font-size: 0.9em; 
+  margin-bottom: 12px; 
+}
+
+p.story_title {
+	font-size:1.2em;
+	font-style:italic;
+	font-weight:normal;
+}
+
+h1
+{
+  font-size: 1.5em;
+  margin-bottom: 5px;
+}
+
+h2{
+  text-transform: uppercase;
+  font-size: 0.9em;
+  font-weight: normal;
+  color: DimGray;
+}
+
+a.link_reference { 
+  margin-bottom: 35px;
+  color: #3FA8BB;
+  text-decoration:none;
+  font-size: 1em;
+}
+
+a.link_reference:hover{
+	text-decoration:underline;
+}
+
+a.selected {
+	color:red;
+}
+
+/* Get rid of Refinery's default title*/
+#body_content_title {
+  display: none;
+}
+
+/* and get rid of Refinery's default header*/
+header {
+  display:none;
+}
+
+/* Now define the formatting for the "page parts".  These can be seen as boxes placed on the screen - see http://www.w3schools.com/css/css_boxmodel.asp for a generic description */
+#header_left {
+  float:left; 
+  width: 225px; 
+  padding-bottom:10px; 
+  border-right: 1px solid #cac9ce; 
+  border-bottom: 1px solid #cac9ce;
+}
+
+#header_right {
+  float:left; 
+  padding-left:10px; 
+  padding-bottom:20px; 
+  padding-top:76px; 
+  padding-right:245px; 
+  border-bottom: 1px solid #cac9ce;
+}
+
+#left_menu {
+  clear:both;
+  float:left;
+/*  height: 669px;*/
+  padding-left: 30px;
+  padding-right: 37px;
+  padding-top: 10px;
+  /*border-bottom: 1px solid #cac9ce;*/
+  display: list-item;
+  list-style: none;
+  text-decoration: none;
+  color: #aeafb3;
+}
+
+/* Ensure that the list items (li) do not take on the default hyperlink and list item formatting (bullet points and underlining) */
+#left_menu li {
+	display:list-item;
+    list-style: none;
+    text-decoration: none;
+}
+
+/* Set the text formatting for the list elements */
+#left_menu li a{
+  display: list-item;
+  list-style: none;
+  color: #aeafb3;
+  padding-bottom: 8px;
+  font-size: 1em;
+  font-family: times;
+  text-decoration: none; /* removes the underline from the hyperlink */
+}
+
+#left_menu li a:hover{
+  text-decoration:underline; /* ...and puts in back in again when mouse hovers over item */
+};
+
+/* Sets the specific "selected" colour for each menu item */
+#left_menu li.index a{ color: #ee3d37; }
+#left_menu li.about_us a{ color: #aa7b51; }
+#left_menu li.what_we_do a{ color: #21aae0; }
+#left_menu li.stories a{ color: #ed3b37; }
+#left_menu li.new a{ color: #009345; }
+#left_menu li.how_you_can_help a{ color: #c5776b; }
+#left_menu li.contact_us a{ color: #e47f27; }
+#left_menu li.favourites a{ color: #3fa8bb; }
+
+/* Layout for the Stories */
+#body_content {
+  #body { /* This is the photo, title and story */
+    float:right;
+	height:460px;
+	width:475px;
+	padding: 20px;
+	border-left: 1px solid #cac9ce;
+  }
+
+  #side_body { /* This is the Story menu */
+	height:500px;
+	float:right;
+	padding-right:98px;
+	padding-left: 10px;
+    border-left: 1px solid #cac9ce;
+    width: 100px;
+	li {
+	  display: list-item;
+	  list-style: none;
+	}
+	li a {
+	  color: #aeafb3;
+      text-decoration: none;
+	  font-size: 1em;
+	  font-family: times;
+	  line-height:200%;
+	}
+	
+	li.selected a{
+		color:#ed3b37;
+	}
+	
+  }
+}
+
+
+#main_photo {
+  float:left;
+/*  height: 400px; */
+  padding:20px;
+  border-left: 1px solid #cac9ce;
+}
+
+
+#page_title {
+  float:right;
+  height: 50px;
+  min-width:704px;
+  padding-left:20px;
+  border-left: 1px solid #cac9ce;
+}
+  
+#main_content_left { 
+  float: right; 
+  min-height:250px;
+  width: 326px; 
+  padding-left:20px; 
+  border-left: 1px solid #cac9ce;  
+  padding-right: 33px;
+}
+
+#main_content_right {
+  float: right; 
+  width: 326px; 
+  padding-right: 19px;
+}
+
+#main_content_full_width { 
+  float: right; 
+  min-height:255px;
+  width: 704px; 
+  padding-left:20px; 
+  border-left: 1px solid #cac9ce;  
+}
+
+#explanation {
+    float: right; 
+    width: 704px; 
+    padding-left:20px; 
+    border-left: 1px solid #cac9ce; 
+}
+
+
+/* We draw the bottom left corner of the page by adding some invisible (white) text to the footer with a partial border around it */
+footer p {
+  float: left;
+  color: white;  /* Hack - it needs some text for the border to show but we do not want to see the text */
+  width: 225px;
+  height: 100px;
+  border-right: 1px solid #cac9ce;
+  margin-top:0px;
+}
+
+footer { 
+  border-top: 1px solid #cac9ce;
+}
+
+footer ul {
+  list-style-type: none;
+  float:right;
+  padding-right:17px;
+}
+
+footer li {
+  float: left;
+  margin-right: 18px;
+}
+
+footer li a { 
+  display:list-item;
+  list-style: none;
+  text-decoration: none;
+  color:#AEAFB3; 
+  font-size: 1em; 
+  font-family: times; 
+}
+
+footer li a:hover{
+  text-decoration:underline;
+}
+
+/* Set the text formatting for Forms */
+#body{
+  min-height:1400px;
+  max-width:450px;
+  float:left;
+  margin-right:234px;
+  padding:20px;
+}
+
+/* "input" includes the strings (single line) and submit button - "textarea" includes the text boxes (multiline) */
+input, textarea {
+  clear:left; /* The clear property specifies which sides of an element where other floating elements are not allowed. */
+  float:left;
+  width: 400px;
+  margin-bottom:30px;
+}
+
+label {
+  float:left;
+  clear:right; 
+}
+
+input[type='checkbox'] {
+  width: 30px;
+  float:left;
+  margin-bottom:30px;
+}
+
+/* This is the "Submit" button */
+input[type='submit'] {
+  clear:left; /* The clear property specifies which sides of an element where other floating elements are not allowed. */
+  float:left;
+  width: 100px;
+  color: darkgray;
+  font-size: 1em; 
+  font-family: times; 
+}
+
+//label[type='checkbox'] {
+//  background:yellow;
+//  float:right;
+//  margin-bottom:30px;
+//}

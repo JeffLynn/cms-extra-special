@@ -1,0 +1,90 @@
+en:
+  refinery:
+    plugins:
+      grant_applications:
+        title: Grant Applications
+        description: Provides a contact form and stores grant applications
+    grant_applications:
+      grant_applications:
+        new:
+          send: Send message
+          privacy_policy: We value your privacy
+      admin:
+        grant_applications:
+          delete: Remove this grant application forever
+          grant_application:
+            read_grant_application: Read the grant application
+            said: said
+            mark_as_spam: Mark as spam
+            mark_as_ham: Move to inbox
+          submenu:
+            inbox: Inbox
+            spam: Spam
+            update_notified: Update who gets notified
+            edit_confirmation_email: Edit confirmation email
+          index:
+            no_grant_applications: You have not received any grant applications yet.
+          spam:
+            no_spam: Hooray! You don't have any spam.
+          show:
+            details: Details
+            age: Age
+            actions: Actions
+            back_to_all_grant_applications: Back to all grant applications
+            spam: Spam
+            spam_yes: 'yes'
+            grant_application: Grant Application
+            to: To
+            from: From
+            click_to_email: Click to email this address
+            phone: Phone
+            date: Date
+            message: Message
+        settings:
+          notification_recipients_form:
+            settings_value_name: Send notifications to
+            explanation: Every time someone contacts you on your website, Refinery sends out an email to say there is a new grant application.
+            hint: When a new grant application is submitted, Refinery will send an email notification to you.
+            example: "Enter your email address(es) like: jack@work.com, jill@office.com"
+          confirmation_email_form:
+            to: To
+            from: From
+            subject: Subject
+            click_to_edit_subject: Click here to edit the subject
+            explanation: Every time someone contacts you on your website, Refinery sends out an email to confirm the grant application with the person who made it.
+            below_edit_email_sent: Below you can edit the email that is sent out.
+            the_customer_making_grant_application: The customer making the grant application
+            message: Message
+            note: "Note: place the text %name% where you'd like the customer's name to appear in the email"
+      mailer:
+        notification:
+          greeting: Hi there
+          you_recieved_new_grant_application: You just received a new grant application on your website.
+          grant_application_starts: --- grant application starts ---
+          grant_application_ends: --- grant application ends ---
+          from: From
+          email: Email
+          phone: Phone
+          message: Message
+          closing_line: Kind Regards
+          ps_html: P.S. All your grant applications are stored in the "Grant Applications" section of Refinery should you ever want to view it later there.
+  activerecord:
+    models:
+      grant_application: Grant Application
+    attributes:
+      grant_application:
+        applicant: Applicant
+        email: Email
+        address: Address
+        supporter: Supporter
+        supporter_contact: Supporter contact
+        application_details: Application details
+        relevant_information: Relevant information
+        cost_details: Cost details
+        other_contributions: Other contributions
+        amount_requested: Amount requested
+        registered_care_allowance: Registered care allowance
+        supported_living_allowance: Supported living allowance
+        domiciliary_allowance: Domiciliary allowance
+        none: None
+        accept_terms: Accept terms

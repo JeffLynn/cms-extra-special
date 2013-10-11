@@ -1,0 +1,27 @@
+<%= render 'submenu' %>
+<div id='records'>
+  <% if searching? %>
+    <%= link_to t('cancel_search', :scope => 'refinery.admin.search'), refinery.grant_applications_admin_grant_applications_path, :class => "cancel-search" %>
+    <h2><%= t('results_for_html', :scope => 'refinery.admin.search', :query => h(params[:search])).html_safe %></h2>
+    <% if @grant_applications.any? %>
+      <ul>
+        <%= render :partial => 'grant_application', :collection => @grant_applications %>
+      </ul>
+    <% else %>
+      <p><%= t('no_results', :scope => 'refinery.admin.search') %></p>
+    <% end %>
+  <% else %>
+    <% if @grouped_grant_applications.any? -%>
+      <% @grouped_grant_applications.each do |container| %>
+        <h3><%= l((grant_application_group = container.last).first.created_at) %></h3>
+        <ul>
+          <%= render :partial => 'grant_application', :collection => grant_application_group %>
+        </ul>
+      <% end %>
+    <% else -%>
+      <p>
+        <strong><%= t('.no_spam') %></strong>
+      </p>
+    <% end -%>
+  <% end %>
+</div>

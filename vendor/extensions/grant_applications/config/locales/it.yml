@@ -1,0 +1,78 @@
+it:
+  refinery:
+    plugins:
+      grant_applications:
+        title: Grant Applications
+    grant_applications:
+      grant_applications:
+        new:
+          header_message: "Un problema si è verificato"
+          message: "I seguenti problemi devono essere corretti:"
+          send: Invia messaggio
+          privacy_policy: "Noi diamo valore alla tua privacy"
+      admin:
+        grant_applications:
+          grant_application:
+            move_grant_application_to_closed: Spostare questa inchiesta chiusa
+            move_grant_application_to_open: Spostare questa indagine per aprire
+            read_grant_application: Leggi l'inchiesta
+            remove_grant_application: "Sei sicuro di voler cancellare la richiesta di '%{name}'?"
+            title: Grant Applications
+          toggle_status:
+            closed: "Inchiesta '%{grant_application}' è chiuso"
+            reopened: "Inchiesta '%{grant_application}' si riapre"
+          index:
+            no_grant_applications: Non hai ancora ricevuto alcuna richiesta in.
+          show:
+            details: Dettagli
+            click_to_email: Clicca per e-mail
+            status: Stato
+            open: Aperto
+            closed: Chiuso
+            age: Età
+            actions: Azioni
+            back_to_all_grant_applications: Torna a tutte le richieste
+            grant_application: Grant Application
+          submenu:
+            update_notified: Aggiornamento chi viene notificata
+            edit_confirmation_email: Modifica email di conferma
+        settings:
+          update:
+            updated: "'%{setting}' stato aggiornato con successo."
+          notification_recipients_form:
+            settings_value_name: Invia a notifiche
+            explanation: "Ogni volta che qualcuno ti contatti sul suo sito web, Refinery invia una mail a dire che c'è una nuova indagine."
+            hint: "Inserisci un indirizzo email di cui sopra. Vuoi la notifica di andare a più di una persona? Inserisci più indirizzi email separati da virgole."
+            example: "E.g. me@domain.com, friend@msn.com, workmate@work.com"
+          confirmation_email_form:
+            to: A
+            from: Da
+            subject: Soggetto
+            click_to_edit_subject: Clicca qui per modificare l'oggetto
+            explanation: "Ogni volta che qualcuno ti contatti sul suo sito web, Refinery invia una e-mail per confermare la richiesta con la persona che ha reso."
+            below_edit_email_sent: Qui di seguito è possibile modificare l'e-mail che viene inviata.
+            the_customer_making_grant_application: Il cliente rendendo l'indagine
+            message: Messaggio
+            note: "Nota: inserire il testo %name% dove desideri che il nome del cliente a comparire nella e-mail"
+          subject_form:
+            subject_value_name: Soggetto
+  activerecord:
+    models:
+      grant_application: Grant Application
+    attributes:
+      grant_application:
+        applicant: Applicant
+        email: Email
+        address: Address
+        supporter: Supporter
+        supporter_contact: Supporter contact
+        application_details: Application details
+        relevant_information: Relevant information
+        cost_details: Cost details
+        other_contributions: Other contributions
+        amount_requested: Amount requested
+        registered_care_allowance: Registered care allowance
+        supported_living_allowance: Supported living allowance
+        domiciliary_allowance: Domiciliary allowance
+        none: None
+        accept_terms: Accept terms

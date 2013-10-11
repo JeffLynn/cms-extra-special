@@ -1,0 +1,12 @@
+ <!-- draw the bottom left corner by putting a partial border using class "footer.p"--> 
+ <p>bottom left corner</p>
+
+<!-- present the menu-->
+<%= Refinery::Pages::MenuPresenter.new(refinery_menu_pages, self).to_html %>
+
+<!-- add in the copyright/charity info -->
+</br>
+</br>
+<a class="right_aligned">website designed by unboxed consulting</a>
+</br>
+<a class="right_aligned">Registered Charity: 1129928</a>
