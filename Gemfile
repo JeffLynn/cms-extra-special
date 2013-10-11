@@ -5,6 +5,7 @@
 # Purpose     : This identifies the "gems" required by the application
 
 source 'https://rubygems.org'
+ruby "1.9.3"
 
 gem 'rails', '3.2.13'
 gem 'jquery-rails'
