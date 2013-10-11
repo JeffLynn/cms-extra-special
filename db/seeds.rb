@@ -12,6 +12,4 @@ Refinery::Pages::Engine.load_seed
 # Added by Refinery CMS Stories extension
 Refinery::Stories::Engine.load_seed
 
-Refinery::Applications::Engine.load_seed
-
 Refinery::GrantApplications::Engine.load_seed
