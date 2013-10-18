@@ -9,15 +9,15 @@ module Refinery
     class Mailer < ActionMailer::Base
       
       # it seems that a "default" is required or the application will crash because the "default_options" method is missing  
-      default :from     => "\"#{Refinery::Core.site_name}\" <no-reply@theextraspecialtrust.org.uk>"
+      default :subject     => "The ExtraSpecial Trust"
 
       # the "confirmation" email is sent to the "supporter" that completes the form      
       def confirmation(grant_application, request)
         @grant_application = grant_application
         mail :subject  => Refinery::GrantApplications::Setting.confirmation_subject,
              :to       => grant_application.email,
-             :from     => "\"#{Refinery::Core.site_name}\" <no-reply@#{request.domain}>",
-             :reply_to => Refinery::GrantApplications::Setting.notification_recipients.split(',').first
+             :reply_to => Refinery::GrantApplications::Setting.notification_recipients.split(',').first,
+             :from     => "grants@theextraspecialtrust.org.uk"
       end
 
       # the "notification" email is sent to EST to give us the details of the application     
@@ -25,7 +25,7 @@ module Refinery
         @grant_application = grant_application
         mail :subject  => Refinery::GrantApplications::Setting.notification_subject,
              :to       => Refinery::GrantApplications::Setting.notification_recipients,
-             :from     => "\"#{Refinery::Core.site_name}\" <no-reply@#{request.domain}>"
+             :from     => "grants@theextraspecialtrust.org.uk"
       end
 
     end
