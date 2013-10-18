@@ -47,5 +47,6 @@ CmsExtraSpecial::Application.configure do
     password:             'ExtraSpecial26',
     authentication:       'plain',
     enable_starttls_auto: true  }
+    config.action_mailer.default_options = {from: 'no-replay@theextraspecialtrust.org.uk'}
   
 end

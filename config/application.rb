@@ -2,7 +2,7 @@
 # Amended by  : Jeff Lynn
 # Created     : 2013.09.25
 # Last updated: 2013.10.18
-# Purpose     : Defines various configuration settings  - this is where the email for Grant Applications is configured
+# Purpose     : Defines various configuration settings for the application
 
 require File.expand_path('../boot', __FILE__)
 
@@ -38,17 +38,6 @@ module CmsExtraSpecial
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
-
-    # Configure the mailer for the Grant Application emails */
-    config.action_mailer.delivery_method = :sendmail
-    # Defaults to:
-    # config.action_mailer.sendmail_settings = {
-    #   location: '/usr/sbin/sendmail',
-    #   arguments: '-i -t'
-    # }
-    config.action_mailer.perform_deliveries = true
-    config.action_mailer.raise_delivery_errors = true
-    config.action_mailer.default_options = {from: 'grants@theextraspecialtrust.org.uk'}
 
     # Configure the default encoding used in templates for Ruby 1.9.
     config.encoding = "utf-8"

@@ -16,7 +16,9 @@ CmsExtraSpecial::Application.configure do
     user_name:            'grants@theextraspecialtrust,org.uk',
     password:             'ExtraSpecial26',
     authentication:       'plain',
-    enable_starttls_auto: true  }    
+    enable_starttls_auto: true  }
+  config.action_mailer.default_options = {from: 'no-replay@theextraspecialtrust.org.uk'}
+    
   # Code is not reloaded between requests
   config.cache_classes = true
 
