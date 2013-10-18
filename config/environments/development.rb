@@ -37,16 +37,5 @@ CmsExtraSpecial::Application.configure do
   # Expands the lines which load the assets
   config.assets.debug = true
   
-  # Configure the mailer for the Grant Application emails */
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.smtp_settings = {
-    address:              'smtp.gmail.com',
-    port:                 587,
-    domain:               'theextraspecialtrust.org.uk',
-    user_name:            'grants@theextraspecialtrust,org.uk',
-    password:             'ExtraSpecial26',
-    authentication:       'plain',
-    enable_starttls_auto: true  }
-    config.action_mailer.default_options = {from: 'no-replay@theextraspecialtrust.org.uk'}
   
 end

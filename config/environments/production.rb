@@ -2,22 +2,10 @@
 # Amended by  : Jeff Lynn
 # Created     : 2013.09.25
 # Last updated: 2013.10.18
-# Purpose     : Configures the "Production" environment - this is where the email for Grant Applications is configured
+# Purpose     : Configures the "Production" environment
 
 CmsExtraSpecial::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
- 
-  # Configure the mailer for the Grant Application emails */
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.smtp_settings = {
-    address:              'smtp.gmail.com',
-    port:                 587,
-    domain:               'theextraspecialtrust.org.uk',
-    user_name:            'grants@theextraspecialtrust,org.uk',
-    password:             'ExtraSpecial26',
-    authentication:       'plain',
-    enable_starttls_auto: true  }
-  config.action_mailer.default_options = {from: 'no-replay@theextraspecialtrust.org.uk'}
     
   # Code is not reloaded between requests
   config.cache_classes = true
