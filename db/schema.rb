@@ -14,7 +14,6 @@
 ActiveRecord::Schema.define(:version => 20131010081100) do
 
   create_table "refinery_applications", :force => true do |t|
-    t.string   "amount_requested"
     t.string   "application"
     t.text     "address"
     t.string   "supporter"
@@ -28,9 +27,11 @@ ActiveRecord::Schema.define(:version => 20131010081100) do
     t.boolean  "domiciliary_allowance"
     t.boolean  "none"
     t.boolean  "accept_terms"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",                 :null => false
+    t.datetime "updated_at",                 :null => false
   end
+
+  add_index "refinery_applications", ["id"], :name => "index_refinery_applications_on_id"
 
   create_table "refinery_events", :force => true do |t|
     t.string   "title"

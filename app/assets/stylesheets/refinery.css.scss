@@ -1,7 +1,7 @@
 /* 
 Author		: Jeff Lynn
 Created		: 2013.09.26
-Last updated: 2013.10.011
+Last updated: 2013.10.18
 Purpose		: defines the layout for the elements of the whole website
 */
 
@@ -110,11 +110,10 @@ header {
 #left_menu {
   clear:both;
   float:left;
-/*  height: 669px;*/
+  min-height: 400px; /* Required for the alignment of the Stories */
   padding-left: 30px;
   padding-right: 37px;
   padding-top: 10px;
-  /*border-bottom: 1px solid #cac9ce;*/
   display: list-item;
   list-style: none;
   text-decoration: none;
@@ -153,43 +152,6 @@ header {
 #left_menu li.contact_us a{ color: #e47f27; }
 #left_menu li.favourites a{ color: #3fa8bb; }
 
-/* Layout for the Stories */
-#body_content {
-  #body { /* This is the photo, title and story */
-    float:right;
-	height:460px;
-	width:475px;
-	padding: 20px;
-	border-left: 1px solid #cac9ce;
-  }
-
-  #side_body { /* This is the Story menu */
-	height:500px;
-	float:right;
-	padding-right:98px;
-	padding-left: 10px;
-    border-left: 1px solid #cac9ce;
-    width: 100px;
-	li {
-	  display: list-item;
-	  list-style: none;
-	}
-	li a {
-	  color: #aeafb3;
-      text-decoration: none;
-	  font-size: 1em;
-	  font-family: times;
-	  line-height:200%;
-	}
-	
-	li.selected a{
-		color:#ed3b37;
-	}
-	
-  }
-}
-
-
 #main_photo {
   float:left;
 /*  height: 400px; */
@@ -223,7 +185,7 @@ header {
 
 #main_content_full_width { 
   float: right; 
-  min-height:255px;
+  min-height:420px;
   width: 704px; 
   padding-left:20px; 
   border-left: 1px solid #cac9ce;  
@@ -234,6 +196,49 @@ header {
     width: 704px; 
     padding-left:20px; 
     border-left: 1px solid #cac9ce; 
+}
+
+/* Extra (invisible) page section to the right of the Grant Application form to produce the correct alignment 
+  (Stories and Grant Applications share the same "body" section formatting - I had to introduce this extra page part to replace the "side-body" in Stories) */
+#form_right_padding {
+  float: right;
+  width: 154px;
+  color: white;
+}
+
+/* Layout for the Stories */
+#body_content {
+    #side_body { /* This is the Story menu */
+	  min-height:490px;
+  	  float:left;
+  	  padding-right:10px;
+      border-left: 1px solid #cac9ce;
+      width: 100px;
+  	  li {
+		display: list-item;
+  	    list-style: none;
+  	  }
+  	  li a {
+		color: #aeafb3;
+        text-decoration: none;
+  	    font-size: 1em;
+  	    font-family: times;
+  	    line-height:200%;
+  	  }
+	
+  	  li.selected a{
+  		color:#ed3b37;
+  	  }
+    }  
+
+    #body { /* This is the photo, title and story */
+	  float:right;
+	  width:450px;
+	  padding: 20px;
+	  padding-right: 100px;
+  	  min-height: 450px;
+	  border-left: 1px solid #cac9ce;
+    }
 }
 
 
@@ -276,13 +281,6 @@ footer li a:hover{
 }
 
 /* Set the text formatting for Forms */
-#body{
-  min-height:1400px;
-  max-width:450px;
-  float:left;
-  margin-right:234px;
-  padding:20px;
-}
 
 /* "input" includes the strings (single line) and submit button - "textarea" includes the text boxes (multiline) */
 input, textarea {
@@ -312,9 +310,3 @@ input[type='submit'] {
   font-size: 1em; 
   font-family: times; 
 }
-
-//label[type='checkbox'] {
-//  background:yellow;
-//  float:right;
-//  margin-bottom:30px;
-//}
