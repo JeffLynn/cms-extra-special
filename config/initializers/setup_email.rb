@@ -1,4 +1,4 @@
- # Created by	: Copied from 
+ # Created by	: Copied from http://guides.rubyonrails.org/action_mailer_basics.html
  # Amended by	: Jeff Lynn
  # Created		: 2013.10.18
  # Last updated: 2013.10.18
