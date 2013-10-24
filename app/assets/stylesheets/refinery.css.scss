@@ -1,7 +1,7 @@
 /* 
 Author		: Jeff Lynn
 Created		: 2013.09.26
-Last updated: 2013.10.18
+Last updated: 2013.10.24
 Purpose		: defines the layout for the elements of the whole website
 */
 
@@ -110,7 +110,7 @@ header {
 #left_menu {
   clear:both;
   float:left;
-  min-height: 400px; /* Required for the alignment of the Stories */
+  min-height: 300px; /* Required for the alignment of the Stories */
   padding-left: 30px;
   padding-right: 37px;
   padding-top: 10px;
@@ -154,7 +154,7 @@ header {
 
 #main_photo {
   float:left;
-/*  height: 400px; */
+//  height: 300px;
   padding:20px;
   border-left: 1px solid #cac9ce;
 }
