@@ -204,7 +204,7 @@ header {
 
 #explanation {
     float: right; 
-    width: 44em; 
+    width: 44.7em; 
     padding-left: 1.25em; 
     border-left: 1px solid $border-colour; 
 }
@@ -213,7 +213,8 @@ header {
   (Stories and Grant Applications share the same "body" section formatting - I had to introduce this extra page part to replace the "side-body" in Stories) */
 #form_right_padding {
   float: right;
-  width: 9.625em;
+  clear: right;
+  width: 10.35em;
   color: white;
 }
 
@@ -297,7 +298,7 @@ footer li a:hover{
 input, textarea {
   clear: left; /* The clear property specifies which sides of an element where other floating elements are not allowed. */
   float: left;
-  width: 25em;
+  width: 40em;
   margin-bottom: 1.875em;
 }
 
