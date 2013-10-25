@@ -3,18 +3,33 @@ Author		: Jeff Lynn
 Created		: 2013.09.26
 Last updated: 2013.10.24
 Purpose		: defines the layout for the elements of the whole website
+NOTE		: All sizes have been set to "em" - this is a scalable size that works for all browsers.  1em = 12pt = 16px. (Except for borders that have been kept at 1px)
 */
+
+/* Set the standard colours */
+$border-colour: 			#cac9ce;
+$font-colour: 				#aeafb3;
+$button-colour: 			darkgray;
+$contact-email-colour: 		#e47f27;
+$home-menu-colour: 			#ee3d37;
+$about-us-menu-colour: 		#aa7b51; 
+$what-we-do-menu-colour: 	#21aae0;
+$stories-menu-colour: 		#ed3b37; 
+$applications-menu-colour:	#009345;
+$how-you-can-help-menu-colour: #c5776b;
+$contact-us-menu-colour: 	#e47f27;
+$favourites-menu-colour: 	#3fa8bb;
+
 
 /* Define the overall formatting */
 body {
   font-family: Times, serif;
-  color: #aeafb3;
+  color: $font-colour;
   font-size: 100%;
-  width: 950px;
+  width: 60em;
   margin-left: auto;
   margin-right: auto;  
 }
-
 
 /* Define the formatting for the standard elements*/
 a {
@@ -31,7 +46,7 @@ a.right_aligned{
 
 a.contact_email{
 	text-decoration:none;
-	color: #e47f27;
+	color: $contact-email-colour;
 	font-size: 1em;
 }
 
@@ -42,7 +57,7 @@ a.contact_email:hover{
 p { 
   font-family: times; 
   font-size: 0.9em; 
-  margin-bottom: 12px; 
+  margin-bottom: 1em; 
 }
 
 p.story_title {
@@ -54,7 +69,7 @@ p.story_title {
 h1
 {
   font-size: 1.5em;
-  margin-bottom: 5px;
+  margin-bottom: .125em;
 }
 
 h2{
@@ -65,8 +80,8 @@ h2{
 }
 
 a.link_reference { 
-  margin-bottom: 35px;
-  color: #3FA8BB;
+  margin-bottom: 2em;
+  color: $favourites-menu-colour;
   text-decoration:none;
   font-size: 1em;
 }
@@ -75,9 +90,6 @@ a.link_reference:hover{
 	text-decoration:underline;
 }
 
-a.selected {
-	color:red;
-}
 
 /* Get rid of Refinery's default title*/
 #body_content_title {
@@ -92,32 +104,32 @@ header {
 /* Now define the formatting for the "page parts".  These can be seen as boxes placed on the screen - see http://www.w3schools.com/css/css_boxmodel.asp for a generic description */
 #header_left {
   float:left; 
-  width: 225px; 
-  padding-bottom:10px; 
-  border-right: 1px solid #cac9ce; 
-  border-bottom: 1px solid #cac9ce;
+  width: 14em; 
+  padding-bottom: .625em;
+  border-right: 1px solid $border-colour; 
+  border-bottom: 1px solid $border-colour;
 }
 
 #header_right {
   float:left; 
-  padding-left:10px; 
-  padding-bottom:20px; 
-  padding-top:76px; 
-  padding-right:245px; 
-  border-bottom: 1px solid #cac9ce;
+  padding-left: .625em; 
+  padding-bottom: 1.15em; 
+  padding-top: 4.75em; 
+  padding-right: 15.3em; 
+  border-bottom: 1px solid $border-colour;
 }
 
 #left_menu {
   clear:both;
   float:left;
-  min-height: 300px; /* Required for the alignment of the Stories */
-  padding-left: 30px;
-  padding-right: 37px;
-  padding-top: 10px;
+  min-height: 18.75em; /* Required for the alignment of the Stories */
+  padding-left: 1.875em;
+  padding-right: 2.31em;
+  padding-top: 0.625em;
   display: list-item;
   list-style: none;
   text-decoration: none;
-  color: #aeafb3;
+  color: $font-colour;
 }
 
 /* Ensure that the list items (li) do not take on the default hyperlink and list item formatting (bullet points and underlining) */
@@ -131,8 +143,8 @@ header {
 #left_menu li a{
   display: list-item;
   list-style: none;
-  color: #aeafb3;
-  padding-bottom: 8px;
+  color: $font-colour;
+  padding-bottom: 0.5em;
   font-size: 1em;
   font-family: times;
   text-decoration: none; /* removes the underline from the hyperlink */
@@ -143,83 +155,82 @@ header {
 };
 
 /* Sets the specific "selected" colour for each menu item */
-#left_menu li.index a{ color: #ee3d37; }
-#left_menu li.about_us a{ color: #aa7b51; }
-#left_menu li.what_we_do a{ color: #21aae0; }
-#left_menu li.stories a{ color: #ed3b37; }
-#left_menu li.new a{ color: #009345; }
-#left_menu li.how_you_can_help a{ color: #c5776b; }
-#left_menu li.contact_us a{ color: #e47f27; }
-#left_menu li.favourites a{ color: #3fa8bb; }
+#left_menu li.index a{ color: $home-menu-colour; }
+#left_menu li.about_us a{ color: $about-us-menu-colour; }
+#left_menu li.what_we_do a{ color: $what-we-do-menu-colour; }
+#left_menu li.stories a{ color: $stories-menu-colour; }
+#left_menu li.new a{ color: $applications-menu-colour; }
+#left_menu li.how_you_can_help a{ color: $how-you-can-help-menu-colour; }
+#left_menu li.contact_us a{ color: $contact-us-menu-colour; }
+#left_menu li.favourites a{ color: $favourites-menu-colour; }
 
 #main_photo {
-  float:left;
-//  height: 300px;
-  padding:20px;
-  border-left: 1px solid #cac9ce;
+  float: left;
+  padding: 1.25em;
+  border-left: 1px solid $border-colour;
 }
 
 
 #page_title {
   float:right;
-  height: 50px;
-  min-width:704px;
-  padding-left:20px;
-  border-left: 1px solid #cac9ce;
+  height: 3.125em;
+  min-width: 44.7em;
+  padding-left: 1.25em;
+  border-left: 1px solid $border-colour;
 }
   
 #main_content_left { 
   float: right; 
-  min-height:250px;
-  width: 326px; 
-  padding-left:20px; 
-  border-left: 1px solid #cac9ce;  
-  padding-right: 33px;
+  min-height: 15.625em;
+  width: 20.375em; 
+  padding-left: 1.25em; 
+  border-left: 1px solid $border-colour;  
+  padding-right: 2em;
 }
 
 #main_content_right {
   float: right; 
-  width: 326px; 
-  padding-right: 19px;
+  width: 20.375em; 
+  padding-right: 1.95em;
 }
 
 #main_content_full_width { 
   float: right; 
-  min-height:420px;
-  width: 704px; 
-  padding-left:20px; 
-  border-left: 1px solid #cac9ce;  
+  min-height: 26.25em;
+  width: 44.7em; 
+  padding-left: 1.25em; 
+  border-left: 1px solid $border-colour;  
 }
 
 #explanation {
     float: right; 
-    width: 704px; 
-    padding-left:20px; 
-    border-left: 1px solid #cac9ce; 
+    width: 44em; 
+    padding-left: 1.25em; 
+    border-left: 1px solid $border-colour; 
 }
 
 /* Extra (invisible) page section to the right of the Grant Application form to produce the correct alignment 
   (Stories and Grant Applications share the same "body" section formatting - I had to introduce this extra page part to replace the "side-body" in Stories) */
 #form_right_padding {
   float: right;
-  width: 154px;
+  width: 9.625em;
   color: white;
 }
 
 /* Layout for the Stories */
 #body_content {
     #side_body { /* This is the Story menu */
-	  min-height:490px;
-  	  float:left;
-  	  padding-right:10px;
-      border-left: 1px solid #cac9ce;
-      width: 110px;
+	  min-height: 30.625em;
+  	  float: left;
+  	  padding-right: 0.625em;
+      border-left: 1px solid $border-colour;
+      width: 6.875;
   	  li {
 		display: list-item;
   	    list-style: none;
   	  }
   	  li a {
-		color: #aeafb3;
+		color: $font-colour;
         text-decoration: none;
   	    font-size: 1em;
   	    font-family: times;
@@ -227,17 +238,17 @@ header {
   	  }
 	
   	  li.selected a{
-  		color:#ed3b37;
+  		color: $stories-menu-colour;
   	  }
     }  
 
     #body { /* This is the photo, title and story */
-	  float:right;
-	  width:450px;
-	  padding: 20px;
-	  padding-right: 100px;
-  	  min-height: 450px;
-	  border-left: 1px solid #cac9ce;
+	  float: right;
+	  width: 28.125em;
+	  padding: 1.25em;
+	  padding-right: 6.25em;
+  	  min-height: 28.125em;
+	  border-left: 1px solid $border-colour;
     }
 }
 
@@ -246,32 +257,32 @@ header {
 footer p {
   float: left;
   color: white;  /* Hack - it needs some text for the border to show but we do not want to see the text */
-  width: 225px;
-  height: 100px;
-  border-right: 1px solid #cac9ce;
-  margin-top:0px;
+  width: 15.6em;
+  height: 6.25em;
+  border-right: 1px solid $border-colour;
+  margin-top: 0px;
 }
 
 footer { 
-  border-top: 1px solid #cac9ce;
+  border-top: 1px solid $border-colour;
 }
 
 footer ul {
   list-style-type: none;
-  float:right;
-  padding-right:17px;
+  float: right;
+  padding-right: 1em;
 }
 
 footer li {
   float: left;
-  margin-right: 18px;
+  margin-right: 1em;
 }
 
 footer li a { 
-  display:list-item;
+  display: list-item;
   list-style: none;
   text-decoration: none;
-  color:#AEAFB3; 
+  color: $font-colour; 
   font-size: 1em; 
   font-family: times; 
 }
@@ -284,29 +295,29 @@ footer li a:hover{
 
 /* "input" includes the strings (single line) and submit button - "textarea" includes the text boxes (multiline) */
 input, textarea {
-  clear:left; /* The clear property specifies which sides of an element where other floating elements are not allowed. */
-  float:left;
-  width: 400px;
-  margin-bottom:30px;
+  clear: left; /* The clear property specifies which sides of an element where other floating elements are not allowed. */
+  float: left;
+  width: 25em;
+  margin-bottom: 1.875em;
 }
 
 label {
-  float:left;
-  clear:right; 
+  float: left;
+  clear: right; 
 }
 
 input[type='checkbox'] {
-  width: 30px;
-  float:left;
-  margin-bottom:30px;
+  width: 2em;
+  float: left;
+  margin-bottom: 2em;
 }
 
 /* This is the "Submit" button */
 input[type='submit'] {
-  clear:left; /* The clear property specifies which sides of an element where other floating elements are not allowed. */
-  float:left;
-  width: 100px;
-  color: darkgray;
+  clear: left; /* The clear property specifies which sides of an element where other floating elements are not allowed. */
+  float: left;
+  width: 6em;
+  color: $button-colour;
   font-size: 1em; 
   font-family: times; 
 }
