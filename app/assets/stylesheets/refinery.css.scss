@@ -186,11 +186,8 @@ header {
 }
   
 #main_content_left { 
-  vertical-align: top;
-//  margin: 0;
-//  padding: 0;
   float: right; 
-  min-height: 14em;
+  min-height: 16em;
   width: 20.375em; 
   padding-left: 1.25em; 
   border-left: 1px solid $border-colour;  
@@ -199,8 +196,6 @@ header {
 }
 
 #main_content_right {
-//  margin: 0;
-//  padding: 0;
   vertical-align: top;
   float: right; 
   min-height: 15.625em;
