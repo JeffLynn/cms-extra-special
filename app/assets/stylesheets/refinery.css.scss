@@ -4,10 +4,11 @@ Created		: 2013.09.26
 Last updated: 2013.10.24
 Purpose		: defines the layout for the elements of the whole website
 NOTE		: All sizes have been set to "em" - this is a scalable size that works for all browsers.  1em = 12pt = 16px. (Except for borders that have been kept at 1px)
+              This results in some numbers to 4 significant places; this is required to ensure they map to an integer number of pixels
 */
 
 /* Set the standard colours */
-$border-colour: 			green; //#cac9ce;
+$border-colour: 			#cac9ce;
 $font-colour: 				#aeafb3;
 $button-colour: 			darkgray;
 $contact-email-colour: 		#e47f27;
@@ -61,9 +62,9 @@ p {
 }
 
 p.story_title {
-	font-size:1.2em;
-	font-style:italic;
-	font-weight:normal;
+	font-size: 1.2em;
+	font-style: italic;
+	font-weight: normal;
 }
 
 h1
@@ -104,18 +105,21 @@ header {
 /* Now define the formatting for the "page parts".  These can be seen as boxes placed on the screen - see http://www.w3schools.com/css/css_boxmodel.asp for a generic description */
 #header_left {
   float:left; 
-  width: 14em; 
+  width: 14em; /* Need to define the height and width as the image renders at slightly different sizes in different internet browsers */ 
+  height: 10.125em;
   padding-bottom: .625em;
   border-right: 1px solid $border-colour; 
   border-bottom: 1px solid $border-colour;
 }
 
 #header_right {
-  float:left; 
-  padding-left: .625em; 
-  padding-bottom: 1.15em; 
-  padding-top: 4.75em; 
-  padding-right: 15.3em; 
+  float: right;
+  width: 30em; /* Need to define the height and width as the image renders at slightly different sizes in different internet browsers */ 
+  height: 4em;
+  padding-left: 1.625em;
+  padding-right: 14.3125em;
+  padding-bottom: 1.875em; 
+  padding-top: 4.875em;
   border-bottom: 1px solid $border-colour;
 }
 
@@ -123,8 +127,9 @@ header {
   clear:both;
   float:left;
   min-height: 18.75em; /* Required for the alignment of the Stories */
+  width: 9.875em;
   padding-left: 1.875em;
-  padding-right: 2.31em;
+  padding-right: 2.25em;
   padding-top: 0.625em;
   display: list-item;
   list-style: none;
@@ -174,7 +179,7 @@ header {
 #page_title {
   float:right;
   height: 3.125em;
-  min-width: 44.7em;
+  width: 44.699em;
   padding-left: 1.25em;
   border-left: 1px solid $border-colour;
 }
@@ -204,7 +209,7 @@ header {
 
 #explanation {
     float: right; 
-    width: 44.7em; 
+    width: 44.685em; 
     padding-left: 1.25em; 
     border-left: 1px solid $border-colour; 
 }
@@ -257,8 +262,9 @@ header {
 /* We draw the bottom left corner of the page by adding some invisible (white) text to the footer with a partial border around it */
 footer p {
   float: left;
+  font-size: 1em;
   color: white;  /* Hack - it needs some text for the border to show but we do not want to see the text */
-  width: 15.6em;
+  width: 14em;
   height: 6.25em;
   border-right: 1px solid $border-colour;
   margin-top: 0px;
