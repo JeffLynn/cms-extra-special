@@ -182,7 +182,6 @@ header {
   width: 40em; /* Note that this width ensures that "main content left" takes a new line */
   padding-left: 1.25em;
   border-left: 1px solid $border-colour;
-  background: green;
 }
   
 #main_content_left { 
@@ -192,15 +191,13 @@ header {
   padding-left: 1.25em; 
   border-left: 1px solid $border-colour;  
   padding-right: 2em;
-  background: blue;
 }
 
 #main_content_right {
   float: right; 
   min-height: 15.625em;
-  width: 20.3em;//20.375em; 
+  width: 20.35em;//20.375em; 
   padding-right: 1.95em;
-  background:yellow;
 }
 
 #main_content_full_width { 
