@@ -179,7 +179,7 @@ header {
 #page_title {
   float:left;
   clear:right; /* Note that "clear right" ensures that "main content right" takes a new line */
-  width: 30em; /* Note that this width ensures that "main content left" takes a new line */
+  width: 40em; /* Note that this width ensures that "main content left" takes a new line */
   padding-left: 1.25em;
   border-left: 1px solid $border-colour;
 }
