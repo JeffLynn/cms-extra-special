@@ -1,10 +1,9 @@
 /* 
 Author		: Jeff Lynn
 Created		: 2013.09.26
-Last updated: 2013.10.24
+Last updated: 2013.10.30
 Purpose		: defines the layout for the elements of the whole website
-NOTE		: All sizes have been set to "em" - this is a scalable size that works for all browsers.  1em = 12pt = 16px. (Except for borders that have been kept at 1px)
-              This results in some numbers to 4 significant places; this is required to ensure they map to an integer number of pixels
+NOTE		: All sizes have been set to "em" - this is a scalable size that works for all browsers.  1em = 12pt = 16px. s
 */
 
 /* Set the standard colours */
@@ -106,31 +105,31 @@ header {
 #header_left {
   float:left; 
   width: 14em; /* Need to define the height and width as the image renders at slightly different sizes in different internet browsers */ 
-  height: 10.125em;
-  padding-bottom: .625em;
-  border-right: 1px solid $border-colour; 
-  border-bottom: 1px solid $border-colour;
+  height: 10em;
+  padding-bottom: 0.5em;
+  border-right: 0.1em solid $border-colour; 
+  border-bottom: 0.1em solid $border-colour;
 }
 
 #header_right {
-  float: right;
+  float: left;
   width: 30em; /* Need to define the height and width as the image renders at slightly different sizes in different internet browsers */ 
   height: 4em;
-  padding-left: 1.625em;
-  padding-right: 14.3125em;
-  padding-bottom: 1.875em; 
-  padding-top: 4.875em;
-  border-bottom: 1px solid $border-colour;
+  padding-left: 1.5em;
+  padding-right: 14.4em;
+  padding-bottom: 2em; 
+  padding-top: 4.5em;
+  border-bottom: 0.1em solid $border-colour;
 }
 
 #left_menu {
   clear:both;
   float:left;
-  min-height: 18.75em; /* Required for the alignment of the Stories */
-  width: 9.875em;
-  padding-left: 1.875em;
-  padding-right: 2.25em;
-  padding-top: 0.625em;
+  min-height: 21em; /* Required for the alignment of the Stories etc */
+  width: 11em;
+  padding-left: 1em;
+  padding-right: 2em;
+  padding-top: 0.5em;
   display: list-item;
   list-style: none;
   text-decoration: none;
@@ -171,8 +170,8 @@ header {
 
 #main_photo {
   float: left;
-  padding: 1.25em;
-  border-left: 1px solid $border-colour;
+  padding: 1.5em;
+  border-left: 0.1em solid $border-colour;
 }
 
 
@@ -180,39 +179,48 @@ header {
   float:left;
   clear:right; /* Note that "clear right" ensures that "main content right" takes a new line */
   width: 40em; /* Note that this width ensures that "main content left" takes a new line */
-  padding-left: 1.25em;
-  border-left: 1px solid $border-colour;
+  padding-left: 1.5em;
+  border-left: 0.1em solid $border-colour;
 }
   
 #main_content_left { 
-  float: right; 
+  float: left; 
   min-height: 16em;
-  width: 20.375em; 
-  padding-left: 1.25em; 
-  border-left: 1px solid $border-colour;  
+  width: 20em; 
+  padding-left: 1.5em; 
+  border-left: 0.1em solid $border-colour;  
   padding-right: 2em;
 }
 
 #main_content_right {
-  float: right; 
-  min-height: 15.625em;
-  width: 20.3645em;//20.375em; 
-  padding-right: 1.95em;
+  float: left; 
+  min-height: 16em;
+  width: 20em; 
 }
 
 #main_content_full_width { 
-  float: right; 
-  min-height: 26.25em;
-  width: 44.7em; 
-  padding-left: 1.25em; 
-  border-left: 1px solid $border-colour;  
+  float: left; 
+  min-height: 26em;
+  width: 44.4em; 
+  padding-left: 1.5em; 
+  border-left: 0.1em solid $border-colour;  
 }
 
+/* Extra (invisible) page section at the top of the Grant Application form to produce the correct alignment */
+#padding_above_applications_page_title {
+    float: left;
+	height: 1em;
+    width: 44.4em;
+    color: white;
+    border-left: 0.1em solid $border-colour; 	
+}
+
+/* Explanation at the top of the Grant Application form */
 #explanation {
-    float: right; 
-    width: 44.685em; 
-    padding-left: 1.25em; 
-    border-left: 1px solid $border-colour; 
+    float: left; 
+    width: 44.4em; 
+	padding-left: 1.5em; 
+    border-left: 0.1em solid $border-colour; 
 }
 
 /* Extra (invisible) page section to the right of the Grant Application form to produce the correct alignment 
@@ -220,18 +228,18 @@ header {
 #form_right_padding {
   float: right;
   clear: right;
-  width: 10.35em;
+  width: 10.4em;
   color: white;
 }
 
 /* Layout for the Stories */
 #body_content {
     #side_body { /* This is the Story menu */
-	  min-height: 30.625em;
+	  min-height: 31em;
   	  float: left;
-  	  padding-right: 0.625em;
-      border-left: 1px solid $border-colour;
-      width: 6.875;
+  	  padding-right: 0.5em;
+      border-left: 0.1em solid $border-colour;
+      width: 7em;
   	  li {
 		display: list-item;
   	    list-style: none;
@@ -251,11 +259,11 @@ header {
 
     #body { /* This is the photo, title and story */
 	  float: right;
-	  width: 28.125em;
-	  padding: 1.25em;
-	  padding-right: 6.25em;
-  	  min-height: 28.125em;
-	  border-left: 1px solid $border-colour;
+	  width: 28em;
+	  padding: 1.5em;
+	  padding-right: 6em;
+  	  min-height: 28em;
+	  border-left: 0.1em solid $border-colour;
     }
 }
 
@@ -266,13 +274,13 @@ footer p {
   font-size: 1em;
   color: white;  /* Hack - it needs some text for the border to show but we do not want to see the text */
   width: 14em;
-  height: 6.25em;
-  border-right: 1px solid $border-colour;
+  height: 6em;
+  border-right: 0.1em solid $border-colour;
   margin-top: 0px;
 }
 
 footer { 
-  border-top: 1px solid $border-colour;
+  border-top: 0.1em solid $border-colour;
 }
 
 footer ul {
@@ -306,7 +314,7 @@ input, textarea {
   clear: left; /* The clear property specifies which sides of an element where other floating elements are not allowed. */
   float: left;
   width: 40em;
-  margin-bottom: 1.875em;
+  margin-bottom: 1.5em;
 }
 
 label {
