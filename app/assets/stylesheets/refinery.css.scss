@@ -232,7 +232,7 @@ header {
     }  
 
     #body { /* This is the photo, title and story */
-	  float: right;
+	  float: right; /* This needs to float to the right of the Stories Menu */
 	  width: 28em;
 	  padding: 1.5em;
 	  padding-right: 6em;
@@ -260,8 +260,8 @@ footer {
 
 footer ul {
   list-style-type: none;
-  float: right;
-  padding-right: 1em;
+  float: left;
+  padding-left: 1em;
 }
 
 footer li {
