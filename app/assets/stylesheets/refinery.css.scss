@@ -1,7 +1,7 @@
 /* 
 Author		: Jeff Lynn
 Created		: 2013.09.26
-Last updated: 2013.10.30
+Last updated: 2013.10.31
 Purpose		: defines the layout for the elements of the whole website
 NOTE		: All sizes have been set to "em" - this is a scalable size that works for all browsers.  1em = 12pt = 16px. s
 */
@@ -206,32 +206,6 @@ header {
   border-left: 0.1em solid $border-colour;  
 }
 
-/* Extra (invisible) page section at the top of the Grant Application form to produce the correct alignment */
-#padding_above_applications_page_title {
-    float: left;
-	height: 1em;
-    width: 44.4em;
-    color: white;
-    border-left: 0.1em solid $border-colour; 	
-}
-
-/* Explanation at the top of the Grant Application form */
-#explanation {
-    float: left; 
-    width: 44.4em; 
-	padding-left: 1.5em; 
-    border-left: 0.1em solid $border-colour; 
-}
-
-/* Extra (invisible) page section to the right of the Grant Application form to produce the correct alignment 
-  (Stories and Grant Applications share the same "body" section formatting - I had to introduce this extra page part to replace the "side-body" in Stories) */
-#form_right_padding {
-  float: right;
-  clear: right;
-  width: 10.4em;
-  color: white;
-}
-
 /* Layout for the Stories */
 #body_content {
     #side_body { /* This is the Story menu */
@@ -265,6 +239,7 @@ header {
   	  min-height: 28em;
 	  border-left: 0.1em solid $border-colour;
     }
+	
 }
 
 
@@ -303,17 +278,44 @@ footer li a {
   font-family: times; 
 }
 
-footer li a:hover{
+footer li a:hover {
   text-decoration:underline;
 }
 
-/* Set the text formatting for Forms */
+/* Set the formatting for Forms */
+
+/* Extra (invisible) page section at the top of the Grant Application form to produce the correct alignment */
+#padding_above_applications_page_title {
+    float: left;
+	height: 1em;
+    width: 44.4em;
+    color: white;
+    border-left: 0.1em solid $border-colour; 	
+}
+
+/* Explanation at the top of the Grant Application form */
+#explanation {
+    float: left; 
+    width: 44.4em; 
+	padding-left: 1.5em; 
+    border-left: 0.1em solid $border-colour; 
+}
+
+#body_content.no_side_body {
+	#body {
+	float: left;
+    width: 28em;
+    padding: 1.5em;
+    margin-left: 14em;
+    min-height: 28em;
+    border-left: 0.1em solid $border-colour;
+} } 
 
 /* "input" includes the strings (single line) and submit button - "textarea" includes the text boxes (multiline) */
 input, textarea {
   clear: left; /* The clear property specifies which sides of an element where other floating elements are not allowed. */
   float: left;
-  width: 40em;
+  width: 39.9em;
   margin-bottom: 1.5em;
 }
 
