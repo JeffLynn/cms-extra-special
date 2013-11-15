@@ -241,6 +241,7 @@ DEPENDENCIES
   pg
   rails (= 3.2.13)
   refinerycms (>= 2.0.0)
+  refinerycms-authentication (~> 2.1.0)
   refinerycms-grant_applications!
   refinerycms-stories!
   refinerycms-testing
